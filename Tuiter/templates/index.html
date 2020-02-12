@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>Este es el contenido del index, gracias por venir {{ name }}</p>
+    <h2>¿Estas registrado?</h2>
+    <h3>Ingresa a tu perfil</h3>
+    <form method="POST" action="/login">
+        <div>
+            <label>Usuario</label>
+            <input type="text" name="userId" placeholder="Ingresa tu usuario">
+            <label>Contraseña</label>
+            <input type="password" name="password" placeholder="Ingresa tu contraseña">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Entrar">
+        </div>
+    </form>
+    <div>
+        <br>
+        <br>
+        <a href='/register'>Registrate!!</a>
+    </div>
 {% endblock %}

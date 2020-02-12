@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Bienvenido {{username}}</h3>
+    <div>
+        <a href='/user/me'>Ir a mi perfil</a>
+        <a href='/logout'>Cierra Sesion</a>
+    </div>
+    <br>
+    <form method="POST" action="/newPost">
+        <div>
+            <br>
+            <input type="text" name="post">
+            <input type="submit" value="Postear">
+        </div>
+        <br>
+    </form>
+{% endblock %}
+
