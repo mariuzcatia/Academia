@@ -19,7 +19,7 @@ $twig = new \Twig\Environment($loader, [
 ]);
 
 $mongoconn = new \MongoDB\Client("mongodb://localhost");
-$userService = new \Tuiter\Services\UserService($mongoconn->tuiter->users);
+$userService = new \Tuiter\Services\UserService(array($mongoconn->tuiter->users));
 $postService = new \Tuiter\Services\PostService($mongoconn->tuiter->posts);
 $likeService = new \Tuiter\Services\LikeService($mongoconn->tuiter->likes);
 $followService = new \Tuiter\Services\FollowService($mongoconn->tuiter->follows, $userService);

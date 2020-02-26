@@ -7,7 +7,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UserNameController implements \Tuiter\Interfaces\Controller {
     public function config($app) {
-        $app->get('/{username}', function (Request $request, Response $response, array $args) {
+        $app->get('/fix/{username}', function (Request $request, Response $response, array $args) {
             $userId = $args['username'];
             $userObject = $request->getAttribute("userService")->getUser($userId);
             

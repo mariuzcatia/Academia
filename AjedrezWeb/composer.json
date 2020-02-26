@@ -1,0 +1,22 @@
+{
+    "name": "marianny/ajedrez-web",
+    "authors": [
+        {
+            "name": "mariuzcatia",
+            "email": "mari.uzcatia@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ajedrez\\": "src/",
+            "Test\\": "tests/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^9.0",
+        "slim/slim": "^4.4",
+        "slim/psr7": "^1.0",
+        "twig/twig": "^3.0",
+        "mongodb/mongodb": "*"
+    }
+}

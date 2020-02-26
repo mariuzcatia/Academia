@@ -12,7 +12,7 @@ final class FollowServiceTest extends \PHPUnit\Framework\TestCase {
         $collection->drop();
         $collectionUserService  = $connection->FollowServiceTest->UserService;
         $collectionUserService->drop();
-        $this->us = new \Tuiter\Services\UserService($collectionUserService);
+        $this->us = new \Tuiter\Services\UserService(array($collectionUserService));
         $this->fs = new \Tuiter\Services\FollowService($collection, $this->us);
         $this->us->register("eliel", "Heber", "123456");
         $this->us->register("edu", "Edward", "123456");

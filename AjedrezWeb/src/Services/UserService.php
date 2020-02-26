@@ -1,6 +1,6 @@
 <?php
 
-namespace Tuiter\Services;
+namespace Ajedrez\Services;
 
 class UserService {
 
@@ -18,7 +18,7 @@ class UserService {
             $numero+=ord($id[$i]);
         }
         $db = $numero % count($this->collections);
-        if($user instanceof \Tuiter\Models\UserNull){
+        if($user instanceof \Ajedrez\Models\UserNull){
             $usuarios= array();
             $usuarios['userId']= $userId;
             $usuarios['name']= $name;
@@ -38,10 +38,10 @@ class UserService {
         $db = $numero % count($this->collections);
         $cursor= $this->collections[$db]->findOne(['userId'=> $userId]);
         if (is_null($cursor)){
-            $user = new \Tuiter\Models\UserNull('','','');
+            $user = new \Ajedrez\Models\UserNull('','','');
             return $user;
         }
-        $user = new \Tuiter\Models\User($cursor['userId'],$cursor['name'], $cursor['password']);
+        $user = new \Ajedrez\Models\User($cursor['userId'],$cursor['name'], $cursor['password']);
         return $user;
     }
 }

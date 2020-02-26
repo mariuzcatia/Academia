@@ -13,6 +13,7 @@
         "slim/psr7": "*",
         "mongodb/mongodb": "*",
         "phpunit/phpunit": "*",
-        "twig/twig": "^3.0"
+        "twig/twig": "^3.0",
+        "php-amqplib/php-amqplib": "^2.11"
     }
 }

@@ -1,0 +1,19 @@
+{
+    "name": "marianny/pilas-colas",
+    "authors": [
+        {
+            "name": "mariuzcatia",
+            "email": "mari.uzcatia@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SQ\\": "src/",
+            "Test\\": "tests/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^9.0",
+        "php-amqplib/php-amqplib": "^2.11"
+    }
+}

@@ -10,28 +10,27 @@
 
                 
                 <div class="row row-mt-15em">
+                    
                     <div>
                         <h3>Busca a tus amigos</h3>
                         <form action="/search" method="POST">
-                            <input type="text" class="newPost"  name="userId" placeholder="Escribe el nombre de usuario" >
+                            <input type="text" class="newPost"  name="userId" placeholder="Escribe el nombre del usuario" >
                             <input type="submit" value="Buscar">
                         </form>
-                    </div>                    
+                    </div>
 
                     <div>
-                        <h3>Crea un nuevo post</h3>
-                        <form action="/post" method="POST">
-                            <input type="text" class="newPost" name="post" placeholder="Escribe tu post aca" >
-                            <input type="submit" value="Enviar">
-                        </form>
+                        <h2><a href='/user/me'>Ir a mi perfil</a></h2>
                     </div>
+
+                    
                     <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
                         <div class="form-wrap" id="tuitsBox2" >
                             <div class="tab">
 
                                 
                                 <div class="tab-content" id="tuitsBox" style="background-image: url(/images/chat.jpg)">
-                                    <h3 style="color: white;">Tuits de {{ current_user.getName() }}</h3>
+                                    <h3 style="color: white;">Tuits de {{ friend }}</h3>
                                     <a href="/follow/{{ current_user.getUserId() }}"><i class="fas fa-user-plus"></i></a>
                                     <p>A divertirse!!!!</p>
 
